@@ -8,6 +8,7 @@ public class Player {
     private final List<Integer> numbers = new ArrayList<>();
 
     public void setInputNumbers(String inputString) {
+        numbers.clear();
         inputStringValidation(inputString);
 
         for (String input : inputString.split("")) {
