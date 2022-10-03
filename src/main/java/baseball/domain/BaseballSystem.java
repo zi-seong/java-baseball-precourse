@@ -1,6 +1,6 @@
 package baseball.domain;
 
-import baseball.enums.Status;
+import baseball.enums.BaseballStatus;
 
 public class BaseballSystem {
     private final Player player;
@@ -17,16 +17,16 @@ public class BaseballSystem {
             int playerNumber = player.getInputNumbers().get(i);
             int computerNumber = computer.getNumbers().get(i);
 
-            Status baseballStatus = checkStatus(playerNumber, computerNumber);
+            BaseballStatus baseballStatus = checkStatus(playerNumber, computerNumber);
             gameResult.addResult(baseballStatus);
         }
         return gameResult;
     }
 
-    private Status checkStatus(int playerNumber, int computerNumber) {
-        if (computerNumber == playerNumber) return Status.STRIKE;
-        if (computer.getNumbers().contains(playerNumber)) return Status.BALL;
-        return Status.NOTHING;
+    private BaseballStatus checkStatus(int playerNumber, int computerNumber) {
+        if (computerNumber == playerNumber) return BaseballStatus.STRIKE;
+        if (computer.getNumbers().contains(playerNumber)) return BaseballStatus.BALL;
+        return BaseballStatus.NOTHING;
     }
 
 }
