@@ -2,7 +2,7 @@ package baseball.domain;
 
 import baseball.enums.Status;
 
-public class Result {
+public class BaseballResult {
 
     private int strikeCount = 0;
     private int ballCount = 0;
