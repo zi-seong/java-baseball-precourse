@@ -9,12 +9,15 @@ public class Computer {
 
     private final int MAX_NUMBER = 9;
     private final int MIN_NUMBER = 1;
+    private final int NUMBERS_LENGTH = 3;
 
     private final List<Integer> numbers = new ArrayList<>();
 
     public void pickNumbers() {
         numbers.clear();
-        numbers.add(Randoms.pickNumberInRange(MIN_NUMBER, MAX_NUMBER));
+        for (int i = 0; i < NUMBERS_LENGTH; i++) {
+            numbers.add(Randoms.pickNumberInRange(MIN_NUMBER, MAX_NUMBER));
+        }
     }
 
 }
