@@ -15,8 +15,14 @@ public class Computer {
 
     public void pickNumbers() {
         numbers.clear();
-        for (int i = 0; i < NUMBERS_LENGTH; i++) {
-            numbers.add(Randoms.pickNumberInRange(MIN_NUMBER, MAX_NUMBER));
+        while (numbers.size() < NUMBERS_LENGTH){
+            addUniqueNumber(Randoms.pickNumberInRange(MIN_NUMBER, MAX_NUMBER));
+        }
+    }
+
+    private void addUniqueNumber(int number){
+        if (!this.numbers.contains(number)) {
+            this.numbers.add(number);
         }
     }
 
