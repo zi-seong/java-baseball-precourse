@@ -20,7 +20,7 @@ public class BaseballResult {
     }
 
     public int getBallCount() {
-        return strikeCount;
+        return ballCount;
     }
 
     public String convert(BaseballResult gameResult) {
