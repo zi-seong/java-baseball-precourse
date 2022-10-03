@@ -1,6 +1,7 @@
 package baseball.controller;
 
 import baseball.domain.*;
+import baseball.enums.BaseballOption;
 import baseball.enums.Messages;
 import camp.nextstep.edu.missionutils.Console;
 
@@ -33,7 +34,7 @@ public class BaseballController {
 
         String input = Console.readLine().trim();
 
-        if (input.equals("1")) {
+        if (input.equals(BaseballOption.RESTART.getNumber()+"")) {
             start();
         }
     }

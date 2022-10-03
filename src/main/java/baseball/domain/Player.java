@@ -1,10 +1,11 @@
 package baseball.domain;
 
+import baseball.enums.BaseballOption;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class Player {
-    private static final int NUMBERS_LENGTH = 3;
     private final List<Integer> numbers = new ArrayList<>();
 
     public void setInputNumbers(String inputString) {
@@ -28,8 +29,8 @@ public class Player {
             throw new IllegalArgumentException("숫자를 입력해주시기 바랍니다.");
         }
 
-        if (inputString.length() > NUMBERS_LENGTH) {
-            throw new IllegalArgumentException(NUMBERS_LENGTH+"자리 까지 입력가능합니다.");
+        if (inputString.length() > BaseballOption.NUMBERS_LENGTH.getNumber()) {
+            throw new IllegalArgumentException(BaseballOption.NUMBERS_LENGTH.getNumber()+"자리 까지 입력가능합니다.");
         }
     }
 
